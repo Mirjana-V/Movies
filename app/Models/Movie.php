@@ -10,10 +10,15 @@ class Movie extends Model
 {
     protected $fillable = ['title', 'genre', 'director', 'years', 'storyline'];
 
-    
+
     public function comments(){
         return $this->hasMany(Comment::class);
     }
+
+    
+    public function addComment($content){
+        $this->comments()->create([
+            'content' => $content
+        ]);
+    }
 }
-
-

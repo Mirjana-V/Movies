@@ -25,6 +25,26 @@
     @endforeach
   </ul>
 </div>
+<br>
+<br>
 
+
+<h4>Add comment:</h4>
+<form action="/movie/{{ $movie->id }}/comments" method="post" >
+  @csrf
+
+  <label for="movie-content">Leave a comment:</label>
+  <input type="text" name="content" id="movie-content" class="form-control">
+
+  @error('content')
+    <div class="alert alert-danger">{{ $message }}</div>
+  @enderror
+
+  <br>
+  <br>
+  <div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
 @endsection
 
