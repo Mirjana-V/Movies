@@ -4,8 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Http\Controllers\MoviesController;
 
 class Movie extends Model
 {
-    use HasFactory;
+    protected $fillable = ['title', 'genre', 'director', 'years', 'storyline'];
 }
