@@ -1,3 +1,9 @@
+@extends('layouts.master')
+
+@section('title', 'Movies')
+
+@section('content')
+
 <h3>Movies</h3>
 <ul>
     @foreach($movies as $movie)
@@ -7,3 +13,5 @@
         </li>
     @endforeach
 </ul>
+
+@endsection
