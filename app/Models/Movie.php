@@ -9,4 +9,11 @@ use App\Http\Controllers\MoviesController;
 class Movie extends Model
 {
     protected $fillable = ['title', 'genre', 'director', 'years', 'storyline'];
+
+    
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
 }
+
+
