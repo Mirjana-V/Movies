@@ -5,7 +5,7 @@
 @section('content')
   <br>
   <h4>{{ $movie->title }}</h4>
-  <p><strong>Genre:</strong> {{ $movie->genre }}</p>
+  <p><a href="{{ route('movie-genre', ['genre' => $movie->genre]) }}"><strong>Genre:</strong> {{ $movie->genre }}</a></p>
   <p><strong>Director:</strong> {{ $movie->director }}</p>
   <p><strong>Years:</strong> {{ $movie->years }}</p>
   <p>{{ $movie->storyline }}</p>
